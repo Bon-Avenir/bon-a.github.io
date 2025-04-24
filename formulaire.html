@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de prêt - PrêtFacile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PrêtFacile</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="formulaire.html">Demande de prêt</a></li>
+                    <li><a href="#">Nos offres</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <h2>Demande de prêt</h2>
+            <form action="traitement.php" method="POST">
+                <div class="form-group">
+                    <label for="montant">Montant souhaité (€)</label>
+                    <input type="number" id="montant" name="montant" min="1000" max="75000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="duree">Durée (mois)</label>
+                    <select id="duree" name="duree" required>
+                        <option value="">-- Choisissez --</option>
+                        <option value="12">12 mois</option>
+                        <option value="24">24 mois</option>
+                        <option value="36">36 mois</option>
+                        <option value="48">48 mois</option>
+                        <option value="60">60 mois</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nom">Nom complet</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sexe">Sexe</label>
+                    <select id="duree" name="duree" required>
+                        <option value="">-- Choisissez --</option>
+                        <option value="12">Homme</option>
+                        <option value="24">Femme</option>
+                        
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="revenu">Revenu mensuel net (€)</label>
+                    <input type="number" id="revenu" name="revenu" min="1000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emploi">Situation professionnelle</label>
+                    <select id="emploi" name="emploi" required>
+                        <option value="">-- Choisissez --</option>
+                        <option value="cdi">Fonctionnaire</option>
+                        <option value="cdd">Employeur</option>
+                        <option value="interim">Employé</option>
+                        <option value="independant">Indépendant</option>
+                        <option value="retraite">Retraité</option>
+                        <option value="Commerce">Commerçant</option>
+                    </select>
+                </div>
+
+                <button type="submit">Envoyer la demande</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 PrêtFacile. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
